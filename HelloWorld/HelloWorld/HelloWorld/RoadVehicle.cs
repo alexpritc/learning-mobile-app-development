@@ -9,30 +9,20 @@ namespace DepartmentOfTransport
         // Variables
         public static string projectVersion = "1.0";
 
-        private int _engineSerialNumber;
-        private int _numberOfWheels;
-        private int _carriageCapacity;
+        public int EngineSerialNumber { get; }
+        public int NumberOfWheels { get; }
+        public int CarriageCapacity { get; }
+
+        public string Description => string.Format("Road Vehicle. Wheels: {0:d}, Capacity: {1:d} people", NumberOfWheels, CarriageCapacity);
 
         // Constructors
         public RoadVehicle(int engineSerialNumber, int numberOfWheels=4, int carriageCapacity=5)
         {
-            _engineSerialNumber = engineSerialNumber;
-            _numberOfWheels = numberOfWheels;
-            _carriageCapacity = carriageCapacity;
+            EngineSerialNumber = engineSerialNumber;
+            NumberOfWheels = numberOfWheels;
+            CarriageCapacity = carriageCapacity;
 
             Console.WriteLine("New vehicle successfully constructed.");
-        }
-
-        // Getters
-        public int EngineSerialNumber => _engineSerialNumber;
-
-        public int GetNumberOfWheels => _numberOfWheels;
-
-        public int GetCarriageCapacity => _carriageCapacity;
-
-        public string GetDescription
-        {
-            get { return string.Format("Road Vehicle. Wheels: {0:d}, Capacity: {1:d} people, serialNo: {2:d}", _numberOfWheels, _carriageCapacity, _engineSerialNumber); }
         }
     }
 }

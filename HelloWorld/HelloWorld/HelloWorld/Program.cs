@@ -19,8 +19,8 @@ namespace HelloWorld
                 return;
             }
 
-            Console.WriteLine(v1.GetDescription);
-            Console.WriteLine(v2.GetDescription);
+            Console.WriteLine(v1.Description);
+            Console.WriteLine(v2.Description);
 
             Console.ReadLine();
         }
