@@ -7,6 +7,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Code running: Project Version " + RoadVehicle.projectVersion);
 
             RoadVehicle v1 = new RoadVehicle(123456);
             RoadVehicle v2 = new RoadVehicle(246810);
