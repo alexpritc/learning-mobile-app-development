@@ -23,6 +23,12 @@ namespace HelloWorld
             Console.WriteLine(v2.Description);
 
             Console.ReadLine();
+
+            Car PrimaryCar = new Car(EngineSerialNumber: 13579);
+            PrimaryCar.HasTowBar = true;
+            Console.WriteLine(PrimaryCar.Description);
+
+            Console.ReadLine();
         }
     }
 }
